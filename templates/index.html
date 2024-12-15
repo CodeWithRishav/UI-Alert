@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    
+    
     <title>Responsive Dashboard Design #1 | AsmrProg</title>
 </head>
 
 <body>
+    
 
     <div class="container">
 
         <!-- Sidebar Section -->
+         
         <aside>
             <div class="toggle">
                 <div class="logo">
@@ -86,12 +92,14 @@
             <div class="addProject">
                 <div class="projects">
                     <a href="{{ url_for('new_project') }}">
-                        <h1>New Project</h1>
+                        <h1 class="new">New Project</h1>
                     </a>
-                    <h3>Create a new project.</h3>
+                    <h3 class="new_sub">Create a new project.</h3>
                 </div>
             </div>
-            <hr style="border: solid 5px gray; border-radius: 20px; margin-top: 10px;">
+            <hr style="border: solid 2px rgb(186, 186, 186); border-radius: 20px; margin-top: 30px;">
+
+            <h2 class="exist_head">Existing Projects</h2>
             <div class="existingProjects" id="existingProjects"></div>
 
         </main>
@@ -116,11 +124,11 @@
 
                 <div class="profile">
                     <div class="info">
-                        <p>Hey, <b>Rishav</b></p>
+                        <!-- <p>Hey, <b>Rishav</b></p> -->
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/profile-1.jpg">
+                        <!-- <img src="images/profile-1.jpg"> -->
                     </div>
                 </div>
             </div>

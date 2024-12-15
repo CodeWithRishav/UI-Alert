@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const projectUrl = `/projects/${encodeURIComponent(project)}`;
                     projectDiv.innerHTML = `
                     <a href="${projectUrl}">
-                        <h1>${project}</h1>
+                        <h1 class="green">${project}</h1>
                     </a>
                     <h3>Found ${data.files[index]} Images & Masks</h3>
                 `;

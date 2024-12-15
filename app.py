@@ -204,6 +204,12 @@ def detect_changes():
     # Generate the alerts for the common paths
     FILEs, TIRs, IR_NEWs, IR_REMOVEDs = detect_changes_in_masks(
         common_paths, project_name, app.config["UPLOAD_FOLDER"], MODEL)
+    
+    # Convert all elements to JSON-serializable types
+    FILEs = [str(item) for item in FILEs]
+    TIRs = [float(item) if isinstance(item, (float, np.float32)) else str(item) for item in TIRs]
+    IR_NEWs = [str(item) for item in IR_NEWs]
+    IR_REMOVEDs = [str(item) for item in IR_REMOVEDs]
 
     return jsonify(
         success=True,

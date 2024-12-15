@@ -288,7 +288,7 @@ def handle_alert(file_name, original_mask, new_mask, original_image, new_image, 
         email_body += "\nRoad removal has been detected."
         email_subject += "Road removal has been detected."
 
-    # send_notifications(sms_body, email_subject, email_body, alert_image_path)
+    send_notifications(sms_body, email_subject, email_body, alert_image_path)
 
 
 def send_notifications(sms_body, email_subject, email_body, image_path):
